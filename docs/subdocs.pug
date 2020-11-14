@@ -267,7 +267,7 @@ block content
     });
     const Model = mongoose.model('Test', schema);
 
-    const doc = new Model({ level1: { level2: 'test' } });
+    const doc = new Model({ level1: { level2: {test: "string value" } });
 
     doc.level1.level2.parent() === doc; // false
     doc.level1.level2.parent() === doc.level1; // true
